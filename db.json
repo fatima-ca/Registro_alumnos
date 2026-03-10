@@ -1,0 +1,45 @@
+{
+  "items": [
+    {
+    "id": 1,
+    "nombre": "Dana Tovar",
+    "grupo": "A"
+    },
+    {
+    "id": 2,
+    "nombre": "Fátima Carrasco",
+    "grupo": "A"
+    },
+    {
+    "id": 3,
+    "nombre": "Daniel Solís",
+    "grupo": "B"
+    },
+    {
+    "id": 4,
+    "nombre": "Maximiliano Rodríguez",
+    "grupo": "B"
+    },
+    {
+    "id": 5,
+    "nombre": "Alexis Aguilar",
+    "grupo": "C"
+    },
+    {
+    "id": 6,
+    "nombre": "Axel Díaz",
+    "grupo": "C"
+    },
+    {
+    "id": 7,
+    "nombre": "Ana",
+    "grupo": "D"
+    },
+    {
+    "id": 8,
+    "nombre": "Luna García",
+    "grupo": "D"
+    } 
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
