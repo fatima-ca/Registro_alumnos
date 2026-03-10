@@ -4,7 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "mock": "json-server --watch db.json --port 3002",
     "dev": "vite",
+    "api": "json-server --watch db.json --port 3002",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"

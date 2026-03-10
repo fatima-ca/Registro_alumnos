@@ -9,7 +9,6 @@ type AlumnoListProps = {
 
 export default function Lista({ alumnos, loading, error}: AlumnoListProps) {
 
-
   if (loading) {
     return <section className=""><p>Cargando alumnos...</p></section>;
   }
@@ -17,8 +16,6 @@ export default function Lista({ alumnos, loading, error}: AlumnoListProps) {
   if (error) {
     return <section className=""><p className="error-text">{error}</p></section>;
   }
-
-
 
   return (
 

@@ -29,7 +29,7 @@ export async function fetchAlumnos(): Promise<Alumno[]> {
 
 //POST
 export async function createAlumno(input: Alumno): Promise<Alumno[]> {
-  const response = await fetch(`${API_BASE_URL}/api/items`, {
+  const response = await fetch(`${API_BASE_URL}/items`, {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify(input),
