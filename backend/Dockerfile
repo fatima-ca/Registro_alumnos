@@ -1,4 +1,9 @@
-FROM maven:3.9-eclipse-temurin-17 AS build
+FROM maven:3.9-eclipse-temurin-21 AS build
+
+# Instalar Node.js
+RUN apt-get update && apt-get install -y curl && \
+    curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
+    apt-get install -y nodejs
 
 WORKDIR /app
 
@@ -15,7 +20,7 @@ RUN mkdir -p /app/backend/src/main/resources/static
 RUN cp -r /app/frontend/dist/* /app/backend/src/main/resources/static/
 RUN cd /app/backend && mvn clean package -DskipTests
 
-FROM eclipse-temurin:17-jre
+FROM eclipse-temurin:21-jre
 
 WORKDIR /app
 
@@ -24,4 +29,3 @@ COPY --from=build /app/backend/target/*.jar app.jar
 EXPOSE 8080
 
 CMD ["java", "-jar", "app.jar"]
-EOF
