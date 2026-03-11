@@ -4,8 +4,13 @@ export type Alumno = {
   grupo: string;
 };
 
+export type CreateAlumnoInput = {
+  nombre: string;
+  grupo: string;
+};
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:3002';
+
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:8080/api/items';
 
 async function handleResponse<T>(response: Response, defaultMessage: string): Promise<T> {
   if (!response.ok) {
@@ -21,20 +26,18 @@ async function handleResponse<T>(response: Response, defaultMessage: string): Pr
 
 //GET
 export async function fetchAlumnos(): Promise<Alumno[]> {
-  const response = await fetch(`${API_BASE_URL}/items`);
+  const response = await fetch(`${API_BASE_URL}`);
   return handleResponse<Alumno[]>(response, 'No se pudieron cargar los alumnos');
 }
 
-
-
 //POST
-export async function createAlumno(input: Alumno): Promise<Alumno[]> {
-  const response = await fetch(`${API_BASE_URL}/items`, {
+export async function createAlumno(input: CreateAlumnoInput): Promise<Alumno> {
+  const response = await fetch(`${API_BASE_URL}`, {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify(input),
   });
-  return handleResponse<Alumno[]>(response, 'No se pudo crear el alumno');
+  return handleResponse<Alumno>(response, 'No se pudo crear el alumno');
 }
 
 

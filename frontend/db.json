@@ -51,9 +51,59 @@
       "grupo": "Z"
     },
     {
-      "id": 12,
+      "id": "12",
       "nombre": "test3",
       "grupo": "Z"
+    },
+    {
+      "id": "17",
+      "nombre": "Lee Know",
+      "grupo": "J"
+    },
+    {
+      "id": "35",
+      "nombre": "Han Jisung",
+      "grupo": "G"
+    },
+    {
+      "id": "20",
+      "nombre": "Xiommara",
+      "grupo": "F"
+    },
+    {
+      "id": "20",
+      "nombre": "Miranda",
+      "grupo": "F"
+    },
+    {
+      "id": "29",
+      "nombre": "Sandino",
+      "grupo": "F"
+    },
+    {
+      "id": "29",
+      "nombre": "Max",
+      "grupo": "R"
+    },
+    {
+      "id": "30",
+      "nombre": "test3",
+      "grupo": "T"
+    },
+    {
+      "id": "19",
+      "nombre": "Max Ramirez",
+      "grupo": "E"
+    },
+    {
+      "id": 8,
+      "nombre": "MAX",
+      "grupo": "R"
+    },
+    {
+      "id": 15,
+      "nombre": "Dana",
+      "grupo": "D"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
